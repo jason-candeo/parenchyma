@@ -14,7 +14,7 @@ pub trait Framework: 'static + Debug {
     /// This associated constant is mainly used for the purposes of debugging and reporting errors.
     ///
     /// [issue#29924](https://github.com/rust-lang/rust/issues/29924): remove `Framework::name`
-    const FRAMEWORK_NAME: &'static str;
+    // const FRAMEWORK_NAME: &'static str;
 
     /// Returns all _activatable_ hardware.
     fn selection(&self) -> &[Hardware];
@@ -23,9 +23,7 @@ pub trait Framework: 'static + Debug {
     fn available_hardware(&self) -> Vec<Hardware>;
 
     #[doc(hidden)]
-    fn name(&self) -> &'static str {
-        Self::FRAMEWORK_NAME
-    }
+    fn name(&self) -> &'static str;
 }
 
 /// Initialize a context, box it, and then return it.

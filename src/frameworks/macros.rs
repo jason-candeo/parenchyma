@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 #[cfg(unix)]
 pub type Sym<T> = ::lib::os::unix::Symbol<T>;
 

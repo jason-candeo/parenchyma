@@ -129,7 +129,7 @@
 //! [Autumn]: https://github.com/autumnai
 
 #![deny(missing_docs, missing_debug_implementations, unused_import_braces, unused_qualifications)]
-#![feature(associated_consts, pub_restricted)]
+#![feature(associated_consts)]
 #![feature(libc, unsize, untagged_unions)]
 
 #[macro_use] extern crate enum_primitive;

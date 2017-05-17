@@ -57,14 +57,16 @@ impl OpenCL {
 
 impl Framework for OpenCL {
 
-    const FRAMEWORK_NAME: &'static str = OPEN_CL;
-
     fn selection(&self) -> &[Hardware] {
         &self.selection
     }
     
     fn available_hardware(&self) -> Vec<Hardware> {
         self.available_hardware.clone()
+    }
+
+    fn name(&self) -> &'static str {
+        "OPEN_CL"
     }
 }
 

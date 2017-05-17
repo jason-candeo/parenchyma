@@ -27,14 +27,16 @@ pub struct Native {
 
 impl Framework for Native {
 
-    const FRAMEWORK_NAME: &'static str = NATIVE;
-
     fn selection(&self) -> &[Hardware] {
         &self.hardware
     }
     
     fn available_hardware(&self) -> Vec<Hardware> {
         self.hardware.clone()
+    }
+
+    fn name(&self) -> &'static str {
+        "NATIVE"
     }
 }
 
